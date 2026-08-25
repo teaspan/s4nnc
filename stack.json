@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "13e3e4f3dabcc48d40ece31ec655358530116410",
-  "head": "a3fa1f2a5bc3e322df1985e4d3e08cd8cdc995b5",
+  "prev": "80bf255c8476873a3dbe97bd0a6b37d8351e1df5",
+  "head": "50ab89abe2fc256ebdecd3070021099f7187ea68",
   "applied": [
     "build-shared-library",
     "ccv-fork"
@@ -13,7 +13,7 @@
       "oid": "6cde9d4ef0f0221a6c016fba4f415f664a713027"
     },
     "ccv-fork": {
-      "oid": "a3fa1f2a5bc3e322df1985e4d3e08cd8cdc995b5"
+      "oid": "50ab89abe2fc256ebdecd3070021099f7187ea68"
     }
   }
 }

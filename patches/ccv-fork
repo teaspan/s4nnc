@@ -3,8 +3,11 @@ Top:    59ee593e64f6622f8a4845e6a360a5e64ffbdea7
 Author: Teaspan <314463419+teaspan@users.noreply.github.com>
 Date:   2026-08-25 14:09:59 +0000
 
-Give @ccv a patches list
+Take ccv from the teaspan fork
 
-Keeps the derived ccv pin exactly as it is and adds the patches the consuming
-workspace supplies. A pin bump that moves either repository then fails loudly
-at fetch instead of silently freezing a stale ccv against a new s4nnc.
+The fork carries the alwayslink and nnc_dynamic_headers changes the shared
+library build needs, a native int8 rowwise GEMM for i8x weights on CUDA, and
+the redirect that takes rules_cuda from its own fork in turn.
+
+The branch is liuliu's pin plus those commits, so the merge-base is still the
+commit this file named. See patches/ccv/README.md.
