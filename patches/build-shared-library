@@ -1,0 +1,18 @@
+Bottom: 52574e6cc56a1023ecd8a7eb58d77fac65901a08
+Top:    9bd28d535a8f536a0bddd9471514bbcf065d6ba6
+Author: Teaspan <314463419+teaspan@users.noreply.github.com>
+Date:   2026-08-25 14:01:19 +0000
+
+Build ccv and NNC into one shared library
+
+Adds cc_shared_library ccv_nnc_shared, rooted at @ccv's nnc and ccv targets
+plus @sqlite3's implementation, with soname libccv_nnc.so, and a cc_import and
+a ccv_nnc_dynamic interface over it. The four ccv-backed shims C_ccv, C_nnc,
+C_sqlite3 and C_sfmt redirect to it, so a consumer links one copy of the CUDA
+fatbin and the ccv host code instead of one per binary. The sqlite root is
+there because Store.swift opens handles that ccv_nnc_tensor_read consumes, and
+one copy processwide is the only arrangement that works.
+
+Retention of the transitive sub-libraries rides on alwayslink in @ccv rather
+than on this rule, because cc_shared_library whole-archives only its direct
+deps.

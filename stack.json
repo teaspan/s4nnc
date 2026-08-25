@@ -1,9 +1,19 @@
 {
   "version": 5,
-  "prev": null,
+  "prev": "055d1638b08c20cb07bd665ee418a0901af67a75",
   "head": "cb885f03fac6ba194efb9ec67acecab1261b5623",
-  "applied": [],
+  "applied": [
+    "build-shared-library",
+    "ccv-patches-list"
+  ],
   "unapplied": [],
   "hidden": [],
-  "patches": {}
+  "patches": {
+    "build-shared-library": {
+      "oid": "6cde9d4ef0f0221a6c016fba4f415f664a713027"
+    },
+    "ccv-patches-list": {
+      "oid": "cb885f03fac6ba194efb9ec67acecab1261b5623"
+    }
+  }
 }
