@@ -16,11 +16,8 @@ def s4nnc_deps():
     _maybe(
         git_repository,
         name = "ccv",
-        remote = "https://github.com/liuliu/ccv.git",
-        commit = "997ee9f5ff6200837201a2d890cb3e7cd86fd402",
-        shallow_since = "1784917775 -0400",
-        patch_args = ["-p1"],
-        patches = ["@//:ccv-shared.patch", "@//:ccv-int8-rowwise-gemm.patch", "@//:ccv-rules-cuda-patches.patch"],
+        remote = "https://github.com/teaspan/ccv.git",
+        commit = "ab7393e1e228b530b41d9ded87e498cda3412cbb",
     )
 
     _maybe(
