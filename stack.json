@@ -1,11 +1,10 @@
 {
   "version": 5,
-  "prev": "b9015c0961cf09b0449981835f1d23ff9803c17c",
-  "head": "2052ac9f2edaca9e31964cfd3cc42e25b7709e7c",
+  "prev": "c34009099c8868d84b368ab7cd27cf4ee8b976d6",
+  "head": "a3fa1f2a5bc3e322df1985e4d3e08cd8cdc995b5",
   "applied": [
     "build-shared-library",
-    "ccv-patches-list",
-    "refresh-temp"
+    "ccv-patches-list"
   ],
   "unapplied": [],
   "hidden": [],
@@ -14,10 +13,7 @@
       "oid": "6cde9d4ef0f0221a6c016fba4f415f664a713027"
     },
     "ccv-patches-list": {
-      "oid": "cb885f03fac6ba194efb9ec67acecab1261b5623"
-    },
-    "refresh-temp": {
-      "oid": "2052ac9f2edaca9e31964cfd3cc42e25b7709e7c"
+      "oid": "a3fa1f2a5bc3e322df1985e4d3e08cd8cdc995b5"
     }
   }
 }
