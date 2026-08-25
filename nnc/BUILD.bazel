@@ -18,8 +18,9 @@ cc_library(
     name = "C_ccv",
     hdrs = ["C_ccv/shim.h"],
     aspect_hints = [":C_ccv_swift_interop"],
+    visibility = ["//visibility:public"],
     deps = [
-        "@ccv//lib:ccv",
+        ":ccv_nnc_dynamic",
     ],
 )
 
@@ -32,8 +33,9 @@ cc_library(
     name = "C_nnc",
     hdrs = ["C_nnc/shim.h"],
     aspect_hints = [":C_nnc_swift_interop"],
+    visibility = ["//visibility:public"],
     deps = [
-        "@ccv//lib:nnc",
+        ":ccv_nnc_dynamic",
     ],
 )
 
@@ -47,7 +49,7 @@ cc_library(
     hdrs = ["C_sqlite3/shim.h"],
     aspect_hints = [":C_sqlite3_swift_interop"],
     deps = [
-        "@ccv//lib:ccv",
+        ":ccv_nnc_dynamic",
     ],
 )
 
@@ -61,13 +63,39 @@ cc_library(
     hdrs = ["C_sfmt/shim.h"],
     aspect_hints = [":C_sfmt_swift_interop"],
     deps = [
-        "@ccv//lib:ccv",
+        ":ccv_nnc_dynamic",
     ],
 )
 
 swift_interop_hint(
     name = "C_sfmt_swift_interop",
     module_name = "C_sfmt",
+)
+
+cc_shared_library(
+    name = "ccv_nnc_shared",
+    shared_lib_name = "libccv_nnc.so",
+    user_link_flags = ["-Wl,-soname,libccv_nnc.so"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@ccv//lib:nnc",
+        "@ccv//lib:ccv",
+        "@sqlite3//:SQLite3_impl",
+    ],
+)
+
+cc_import(
+    name = "ccv_nnc_shared_so",
+    shared_library = ":ccv_nnc_shared",
+)
+
+cc_library(
+    name = "ccv_nnc_dynamic",
+    visibility = ["//visibility:public"],
+    deps = [
+        ":ccv_nnc_shared_so",
+        "@ccv//lib:nnc_dynamic_headers",
+    ],
 )
 
 config_setting(
