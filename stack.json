@@ -1,19 +1,15 @@
 {
   "version": 5,
-  "prev": "80bf255c8476873a3dbe97bd0a6b37d8351e1df5",
-  "head": "50ab89abe2fc256ebdecd3070021099f7187ea68",
+  "prev": "240f7a6eb01ee04f97a58a319031454c61e8d27b",
+  "head": "6cde9d4ef0f0221a6c016fba4f415f664a713027",
   "applied": [
-    "build-shared-library",
-    "ccv-fork"
+    "build-shared-library"
   ],
   "unapplied": [],
   "hidden": [],
   "patches": {
     "build-shared-library": {
       "oid": "6cde9d4ef0f0221a6c016fba4f415f664a713027"
-    },
-    "ccv-fork": {
-      "oid": "50ab89abe2fc256ebdecd3070021099f7187ea68"
     }
   }
 }
