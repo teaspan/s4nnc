@@ -1,11 +1,11 @@
 Bottom: 1465ddd01c496b968dcc7f16041a419ed189dca0
 Top:    9ef7e4d25212169dcc9800ace15be373cf955075
 Author: Teaspan <314463419+teaspan@users.noreply.github.com>
-Date:   2026-09-01 21:32:00 +0000
+Date:   2026-09-01 21:58:00 +0000
 
 Build ccv and NNC into one shared library
 
 One copy of the CUDA fatbin per process instead of one per binary. sqlite is
-included because Store.swift and ccv_nnc_tensor_read share handles. The
+also included, because Store.swift and ccv_nnc_tensor_read share handles. The
 transitive sub-libraries are retained by alwayslink in @ccv, since
 cc_shared_library whole-archives only its direct deps.
