@@ -1,19 +1,15 @@
 {
   "version": 5,
-  "prev": "f2bcb3bf50159484abe4f605fb1c014fe34610bc",
-  "head": "343aea0707f84f1dc24edcd0381f5465c057c6c8",
+  "prev": "ec103d689878aa0251bc526ea60c0096f3b43072",
+  "head": "6cde9d4ef0f0221a6c016fba4f415f664a713027",
   "applied": [
-    "build-shared-library",
-    "dti-dev-sentinel"
+    "build-shared-library"
   ],
   "unapplied": [],
   "hidden": [],
   "patches": {
     "build-shared-library": {
       "oid": "6cde9d4ef0f0221a6c016fba4f415f664a713027"
-    },
-    "dti-dev-sentinel": {
-      "oid": "343aea0707f84f1dc24edcd0381f5465c057c6c8"
     }
   }
 }
