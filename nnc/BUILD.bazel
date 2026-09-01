@@ -185,3 +185,5 @@ swift_library(
         ":nnc",
     ],
 )
+
+print("dti-dev-sentinel: s4nnc")
