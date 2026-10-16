@@ -1,15 +1,15 @@
 {
   "version": 5,
-  "prev": "613983632ff5df00f3b9e153ef8d4d5dadefb486",
-  "head": "f64e4a6ed2d656b5d169d39fc1316c8df793d09f",
-  "applied": [],
-  "unapplied": [
+  "prev": "15f1d979ffb4a92856bbc1fce28c68e9376d3e32",
+  "head": "1b56e1022ee7dbebef9993a72588914dbe90797e",
+  "applied": [
     "build-shared-library"
   ],
+  "unapplied": [],
   "hidden": [],
   "patches": {
     "build-shared-library": {
-      "oid": "386932da885ff73f155cef18acea53283b463a5f"
+      "oid": "1b56e1022ee7dbebef9993a72588914dbe90797e"
     }
   }
 }
