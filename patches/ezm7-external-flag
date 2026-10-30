@@ -1,0 +1,8 @@
+Bottom: 48e6b8a1621f597614d64246e3e9b797753c976b
+Top:    48e6b8a1621f597614d64246e3e9b797753c976b
+Author: Teaspan <314463419+teaspan@users.noreply.github.com>
+Date:   2026-10-30 06:32:51 +0000
+
+Mark externally stored ezm7 tensors as external data.
+
+ezm7EncodeWithExternalStore writes the payload to the external store but does not set 0x1000_0000 in the identifier, unlike the other external encoders. Readers then decode the 16-byte pointer as an inline ezm7 payload and return zeros. TensorData.makeCompactStore skips the row and deletes the external file it points into. The AndEzm7 encoders fall back to this encoder and write the same rows.
