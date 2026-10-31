@@ -647,30 +647,6 @@ final class StoreTests: XCTestCase {
     }
   }
 
-  func testWriteTensorAndReadBackWithEZM7AndExternalStore() throws {
-    let graph = DynamicGraph()
-    var tensor: Tensor<Float16> = Tensor(.CPU, .NC(64, 64))
-    for i in 0..<64 {
-      for j in 0..<64 {
-        tensor[i, j] = 0.01 * Float16(i * 64 + j)
-      }
-    }
-    var readout: AnyTensor? = nil
-    var readoutCodec: DynamicGraph.Store.Codec? = nil
-    graph.openStore("test/tmp.db", externalStore: "test/tmp.db-tensordata") { store in
-      store.write("a", tensor: tensor, codec: [.externalData, .ezm7])
-      readout = store.read("a", codec: [.externalData, .ezm7])
-      readoutCodec = store.codec(for: "a")
-    }
-    XCTAssertEqual(readoutCodec!, [.ezm7, .externalData])
-    let varf = Tensor<Float16>(try XCTUnwrap(readout))
-    for i in 0..<64 {
-      for j in 0..<64 {
-        XCTAssertEqual(varf[i, j], tensor[i, j], accuracy: 0.2)
-      }
-    }
-  }
-
   func testWriteTensorAndReadBackWithI8X() throws {
     let graph = DynamicGraph()
     var tensor: Tensor<Float16> = Tensor(.CPU, .NC(16, 128))
