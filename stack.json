@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "0ba79431de4cff8a1dbad83682853238e6dc6255",
-  "head": "8ab7a70e48ae0893f1e2d99b67cfe524002ba43d",
+  "prev": "e5f8a0c6ca70598787066990fb2842c0f42b4598",
+  "head": "23acfb7af599d0bcda77491ffb32f83dd9c4a57c",
   "applied": [
     "build-shared-library",
     "ezm7-external-flag"
@@ -13,7 +13,7 @@
       "oid": "d5946e6d7c4df006054770c5dac22c131eaeb45c"
     },
     "ezm7-external-flag": {
-      "oid": "8ab7a70e48ae0893f1e2d99b67cfe524002ba43d"
+      "oid": "23acfb7af599d0bcda77491ffb32f83dd9c4a57c"
     }
   }
 }
