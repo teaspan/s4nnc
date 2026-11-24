@@ -1,12 +1,12 @@
 {
   "version": 5,
-  "prev": "c6acf2e469f65ab99fe8268a009f446553846c74",
-  "head": "54aafef4cd524bd7c8c6790dbd99e4b1276fc3a1",
-  "applied": [
+  "prev": "5bcb5e8b09e61db38920bf54f9d87cae15951291",
+  "head": "50d060dba795a6d9ca8497ed0222dde7492a8d12",
+  "applied": [],
+  "unapplied": [
     "build-shared-library",
     "ezm7-external-flag"
   ],
-  "unapplied": [],
   "hidden": [],
   "patches": {
     "build-shared-library": {
