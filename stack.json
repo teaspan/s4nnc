@@ -1,19 +1,19 @@
 {
   "version": 5,
-  "prev": "45d32b6c121cfe5b9212e00af1b2f1a72334f654",
-  "head": "9c912b34f8242deeccd5d78fe28a140c0137b2ff",
-  "applied": [],
-  "unapplied": [
+  "prev": "8a04a65851cb93e004a23ea7cc3138c71cda1ba4",
+  "head": "8753b06d5e68110b8e60249ed8dffde4f0d7487c",
+  "applied": [
     "build-shared-library",
     "ezm7-external-flag"
   ],
+  "unapplied": [],
   "hidden": [],
   "patches": {
     "build-shared-library": {
-      "oid": "f41d2711fc0acde0fa23af92ed3cbe1fc84c50a7"
+      "oid": "e441e7eec6b02cbd895404decff94dd4a114da99"
     },
     "ezm7-external-flag": {
-      "oid": "83c922a9b586d8accc658c28718bbb2c064ee656"
+      "oid": "8753b06d5e68110b8e60249ed8dffde4f0d7487c"
     }
   }
 }
